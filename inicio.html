@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menu Principal | Gestion de Espacios</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+
+<body>
+
+    <main class="inicio">
+
+
+        <!-- Encabezado -->
+
+        <header class="menu-header">
+
+            <img
+                src="img/logo-etitc.jpg"
+                alt="Logo ETITC"
+                class="logo-menu"
+            >
+
+
+            <div class="titulo-menu">
+
+                <h1>
+                    Gestión de Aulas y Espacios
+                </h1>
+            </div>
+
+        </header>
+
+
+
+        <section class="bienvenida">
+
+            <h2>
+                Bienvenido al sistema
+            </h2>
+
+            <p>
+                Seleccione una opción para continuar.
+            </p>
+
+        </section>
+
+
+
+        <!-- Opciones del menu -->
+
+        <section class="opciones">
+
+
+            <!-- Salones -->
+
+            <a href="#" class="opcion">
+
+                <div class="icono">🏫</div>
+                <h3> Salones</h3>
+                <p>
+                    Consultar y gestionar los salones de la universidad.
+                </p>
+
+            </a>
+
+
+            <!-- Zonas recreativas -->
+
+            <a href="#" class="opcion">
+
+                <div class="icono">⚽</div>
+                <h3>Zonas recreativas</h3>
+                <p>
+                    Consultar los espacios recreativos disponibles.
+                </p>
+
+            </a>
+
+
+            <!-- Reportes -->
+
+            <a href="#" class="opcion">
+
+                <div class="icono">📋</div>
+                <h3>Reportes</h3>
+                <p>
+                    Registrar y consultar reportes sobre los espacios.
+                </p>
+
+            </a>
+
+
+            <!-- Ayudas -->
+
+            <a href="#" class="opcion">
+
+                <div class="icono">❓</div>
+                <h3>Ayudas</h3>
+                <p>
+                    Consultar información y ayuda sobre el sistema.
+                </p>
+
+            </a>
+
+
+        </section>
+
+
+        <!-- Cerrar sesión -->
+
+        <button
+            class="btn-cerrar"
+            onclick="cerrarSesion()"
+        >
+            Cerrar sesión
+        </button>
+
+
+    </main>
+
+
+    <script>
+
+        function cerrarSesion() {
+            sessionStorage.removeItem("usuario");
+            window.location.href = "index.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

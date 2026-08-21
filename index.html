@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inicio de Sesion | Gestion de Espacios</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <section class="login-box">
+
+            <!-- Logo -->
+            <img 
+                src="img/logo-etitc.jpg" 
+                alt="Logo de la ETITC"
+                class="logo"
+            >
+
+            <!-- Título -->
+            <h1>Gestion de Aulas y Espacios</h1>
+
+            <p class="descripcion">
+                Inicie sesion para acceder al sistema
+            </p>
+
+
+            <!-- Formulario -->
+            <form id="loginForm">
+
+                <!-- Usuario -->
+                <div class="campo">
+
+                    <label for="usuario">
+                        Usuario
+                    </label>
+
+                    <input
+                        type="text"
+                        id="usuario"
+                        placeholder="Ingrese su usuario"
+                    >
+
+                </div>
+
+
+                <!-- Contraseña -->
+                <div class="campo">
+
+                    <label for="password">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Ingrese su contraseña"
+                    >
+
+                </div>
+
+
+                <!-- Mensaje de error -->
+                <p id="mensajeError" class="mensaje-error"></p>
+
+
+                <!-- Botón -->
+                <button type="submit" class="btn-login">
+                    Iniciar sesión
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>
