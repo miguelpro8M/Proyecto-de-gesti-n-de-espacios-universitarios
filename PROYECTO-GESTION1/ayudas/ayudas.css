@@ -1,0 +1,214 @@
+/* contenedor */
+
+.ayudas-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 40px;
+}
+
+/* encabezado */
+
+.ayudas-header {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.10);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ayudas-titulo {
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-ayudas {
+
+    width: 100px;
+    height: auto;
+}
+
+.ayudas-titulo h1 {
+
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.ayudas-titulo p {
+    color: #777;
+}
+
+/* boton regreso */
+
+.btn-regresar {
+
+    padding: 10px 18px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-regresar:hover {
+
+    background-color: #555;
+}
+
+/* introduccion */
+
+.ayudas-introduccion {
+
+    max-width: 1100px;
+    margin: 35px auto 25px;
+}
+
+.ayudas-introduccion h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.ayudas-introduccion p {
+
+    color: #777;
+    line-height: 1.5;
+}
+
+/* opciones de ayuda */
+.opciones-ayuda {
+
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* tarjetas */
+.tarjeta-ayuda {
+
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 20px;
+    transition: 0.3s;
+}
+
+.tarjeta-ayuda:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 7px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* iconos */
+
+.icono-ayuda {
+
+    font-size: 40px;
+    min-width: 55px;
+    text-align: center;
+}
+
+/* texto */
+
+.tarjeta-ayuda h3 {
+
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.tarjeta-ayuda p {
+
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+/* enlaces */
+
+.enlace-ayuda {
+
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.enlace-ayuda:hover {
+    text-decoration: underline;
+}
+
+/* preguntas frecuentes */
+
+.preguntas-frecuentes {
+
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.preguntas-frecuentes h2 {
+
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.pregunta {
+
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.pregunta h3 {
+
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.pregunta p {
+
+    color: #666;
+    line-height: 1.5;
+}
+
+/* contacto */
+.contacto-ayuda {
+
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icono-contacto {
+    font-size: 40px;
+}
+
+.contacto-ayuda h2 {
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+
+.contacto-ayuda p {
+    color: #666;
+    line-height: 1.5;
+}

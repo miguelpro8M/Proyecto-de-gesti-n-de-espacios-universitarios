@@ -1,0 +1,228 @@
+/* contenedor */
+
+.salones-container {
+
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 40px;
+}
+
+/* encabezado */
+
+.salones-header {
+
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.10);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Titulo */
+
+.salones-titulo {
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo */
+
+.logo-salones {
+
+    width: 100px;
+    height: auto;
+}
+
+/* Texto del encabezado */
+
+.salones-titulo h1 {
+
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.salones-titulo p {
+
+    color: #777;
+}
+
+/* boton regreso */
+
+.btn-regresar {
+
+    padding: 10px 18px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-regresar:hover {
+
+    background-color: #555;
+
+}
+
+/* introduccion*/
+
+.salones-introduccion {
+
+    max-width: 1100px;
+    margin: 35px auto 25px;
+}
+
+.salones-introduccion h2 {
+
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.salones-introduccion p {
+
+    color: #777;
+}
+
+
+/* filtros */
+
+.filtros {
+
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+}
+
+.filtro label {
+
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.filtro input,
+.filtro select {
+
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+}
+
+.filtro input:focus,
+.filtro select:focus {
+
+    border-color: #555;
+}
+
+/* lista */
+
+.lista-salones {
+
+    max-width: 1100px;
+    margin: 25px auto;
+    display: grid;
+    gap: 18px;
+}
+
+/* tarjeta del salon */
+
+.salon {
+
+    background-color: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s;
+}
+
+.salon:hover {
+
+    transform: translateY(-3px);
+    box-shadow:
+        0 7px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Icono */
+
+.salon-icono {
+
+    font-size: 40px;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Informacion */
+
+.salon-informacion {
+
+    flex: 1;
+}
+
+.salon-informacion h3 {
+
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.salon-informacion p {
+
+    color: #666;
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+/* estado */
+
+.estado {
+
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.disponible {
+
+    background-color: #d9f5df;
+    color: #176b2c;
+}
+
+.ocupado {
+
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+/* sin resultados */
+
+.sin-resultados {
+
+    max-width: 1100px;
+    margin: 30px auto;
+    text-align: center;
+    color: #777;
+    display: none;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Salones | Gestión de Espacios</title>
+
+    <!-- CSS general -->
+    <link rel="stylesheet" href="../estilos.css">
+
+    <!-- CSS especifico de salones -->
+    <link rel="stylesheet" href="salones.css">
+
+</head>
+
+
+<body>
+
+    <main class="salones-container">
+
+        <!-- encabezado -->
+        <header class="salones-header">
+
+            <div class="salones-titulo">
+
+                <img
+                    src="../img/logo-etitc.jpg"
+                    alt="Logo de la ETITC"
+                    class="logo-salones"
+                >
+
+                <div>
+                    <h1>Salones</h1>
+                    <p>
+                        Gestión y consulta de aulas universitarias
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- boton regresar -->
+
+            <a href="../inicio.html" class="btn-regresar">
+                ← Volver al menú
+            </a>
+
+        </header>
+
+        <!-- introducion -->
+        <section class="salones-introduccion">
+
+            <h2>Consulta de salones</h2>
+            <p>
+                Busque y consulte la informacion de los salones
+                disponibles en la universidad.
+            </p>
+
+        </section>
+
+        <!-- buscador y filtros -->
+
+        <section class="filtros">
+
+            <!-- Buscar salon -->
+
+            <div class="filtro">
+
+                <label for="buscarSalon">
+                    Buscar salón
+                </label>
+
+                <input
+                    type="text"
+                    id="buscarSalon"
+                    placeholder="Ejemplo: A-101"
+                >
+
+            </div>
+
+            <!-- Edificio -->
+            <div class="filtro">
+
+                <label for="edificio">
+                    Edificio
+                </label>
+
+                <select id="edificio">
+
+                    <option value="todos">
+                        Todos
+                    </option>
+
+                    <option value="A">
+                        Edificio A
+                    </option>
+
+                    <option value="B">
+                        Edificio B
+                    </option>
+
+                    <option value="C">
+                        Edificio C
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- Tipo de salon -->
+
+            <div class="filtro">
+
+                <label for="tipoSalon">
+                    Tipo de salón
+                </label>
+
+                <select id="tipoSalon">
+
+                    <option value="todos">
+                        Todos
+                    </option>
+
+                    <option value="aula">
+                        Aula
+                    </option>
+
+                    <option value="computadores">
+                        Sala de computadores
+                    </option>
+
+                    <option value="laboratorio">
+                        Laboratorio
+                    </option>
+
+                    <option value="auditorio">
+                        Auditorio
+                    </option>
+
+                </select>
+
+            </div>
+
+
+        </section>
+
+        <!-- lista de salones -->
+
+        <section id="listaSalones" class="lista-salones">
+
+        </section>
+
+        <!-- Mensaje cuando no hay resultados -->
+
+        <p id="sinResultados" class="sin-resultados">
+            No se encontraron salones con los criterios seleccionados
+        </p>
+
+    </main>
+
+    <!-- JavaScript de salones -->
+
+    <script src="salones.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+/* contenedor */
+
+.reportes-container {
+
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 40px;
+
+}
+
+/* encabezado */
+
+.reportes-header {
+
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.10);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reportes-titulo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-reportes {
+
+    width: 100px;
+    height: auto;
+
+}
+
+.reportes-titulo h1 {
+
+    font-size: 30px;
+    margin-bottom: 5px;
+
+}
+
+.reportes-titulo p {
+
+    color: #777;
+
+}
+
+/* boton regreso */
+
+.btn-regresar {
+
+    padding: 10px 18px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 14px;
+    transition: 0.3s;
+
+}
+
+.btn-regresar:hover {
+
+    background-color: #555;
+
+}
+
+/* introduccion */
+
+.reportes-introduccion {
+
+    max-width: 1100px;
+    margin: 35px auto 25px;
+
+}
+
+.reportes-introduccion h2 {
+
+    font-size: 24px;
+    margin-bottom: 8px;
+
+}
+
+.reportes-introduccion p {
+
+    color: #777;
+    max-width: 800px;
+    line-height: 1.5;
+
+}
+
+/* formulario */
+
+.formulario-reporte {
+
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.formulario-reporte form {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+
+}
+
+/* campos */
+
+.campo-reporte {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.campo-reporte label {
+
+    margin-bottom: 8px;
+    font-weight: bold;
+
+}
+
+.campo-reporte input,
+.campo-reporte select,
+.campo-reporte textarea {
+
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+
+}
+
+.campo-reporte input:focus,
+.campo-reporte select:focus,
+.campo-reporte textarea:focus {
+
+    border-color: #555;
+
+}
+
+/* descripcion */
+
+.campo-completo {
+
+    grid-column: 1 / 3;
+
+}
+
+.campo-reporte textarea {
+
+    resize: vertical;
+    min-height: 130px;
+
+}
+
+/* botones */
+
+.botones-reporte {
+
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.btn-cancelar,
+.btn-enviar {
+
+    padding: 12px 22px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+
+}
+
+.btn-cancelar {
+
+    background-color: #e5e5e5;
+    color: #333;
+
+}
+
+.btn-cancelar:hover {
+    background-color: #d5d5d5;
+
+}
+
+.btn-enviar {
+
+    background-color: #333;
+    color: white;
+
+}
+
+.btn-enviar:hover {
+
+    background-color: #555;
+
+}
+
+/* reportes registrados */
+
+.reportes-recientes {
+
+    max-width: 1100px;
+    margin: 35px auto;
+
+}
+
+.reportes-recientes h2 {
+
+    font-size: 24px;
+    margin-bottom: 20px;
+
+}
+
+/* tarjeta reporte */
+
+.tarjeta-reporte {
+
+    background-color: white;
+    padding: 22px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.reporte-cabecera {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+}
+
+.reporte-cabecera h3 {
+
+    font-size: 20px;
+
+}
+
+.estado-reporte {
+
+    padding: 7px 14px;
+    border-radius: 20px;
+    background-color: #fff3cd;
+    color: #856404;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+.tarjeta-reporte p {
+
+    margin-bottom: 8px;
+    color: #555;
+
+}
+
+.fecha-reporte {
+
+    margin-top: 15px;
+    font-size: 13px;
+    color: #888 !important;
+
+}
+
+/* prioridades */
+
+.prioridad-baja {
+    color: #176b2c;
+    font-weight: bold;
+}
+
+.prioridad-media {
+    color: #856404;
+    font-weight: bold;
+}
+
+.prioridad-alta {
+    color: #842029;
+    font-weight: bold;
+}
+
+/* sin reportes */
+
+.sin-reportes {
+
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    color: #777;
+    text-align: center;
+}
