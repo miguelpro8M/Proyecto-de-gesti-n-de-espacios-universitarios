@@ -134,6 +134,15 @@
 
 /* lista */
 
+.contador-disponibles {
+
+    max-width: 1100px;
+    margin: 20px auto 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
 .lista-salones {
 
     max-width: 1100px;
@@ -191,6 +200,24 @@
     color: #666;
     margin-bottom: 3px;
     font-size: 14px;
+}
+
+.btn-estado-salon {
+
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.btn-estado-salon:hover {
+
+    background-color: #555;
 }
 
 /* estado */

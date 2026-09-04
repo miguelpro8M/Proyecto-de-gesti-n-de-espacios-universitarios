@@ -101,6 +101,9 @@ const listaSalones =
 const sinResultados =
     document.getElementById("sinResultados");
 
+const contadorDisponibles =
+    document.getElementById("contadorDisponibles");
+
 
 // mostrar salones
 
@@ -112,6 +115,8 @@ function mostrarSalones(lista) {
     // comprueba si existen resultados
     if (lista.length === 0) {
         sinResultados.style.display = "block";
+        contadorDisponibles.textContent =
+            "0 de 0 salones disponibles";
         return;
 
     }
@@ -172,6 +177,13 @@ function mostrarSalones(lista) {
                     ${salon.capacidad} personas
                 </p>
 
+                <button
+                    class="btn-estado-salon"
+                    data-nombre="${salon.nombre}"
+                >
+                    ${salon.estado === "Disponible" ? "Reservar salón" : "Liberar salón"}
+                </button>
+
             </div>
 
 
@@ -183,10 +195,30 @@ function mostrarSalones(lista) {
 
         `;
 
-        // Agregar tarjeta a la página
+        // agregar tarjeta a la pagina
         listaSalones.appendChild(tarjeta);
 
     });
+
+    // actualizar el contador de disponibles
+    actualizarContadorDisponibles();
+
+}
+
+
+function actualizarContadorDisponibles() {
+
+    const tarjetasDisponibles =
+        listaSalones.querySelectorAll(".disponible");
+
+    const totalTarjetas =
+        listaSalones.querySelectorAll(".salon");
+
+    contadorDisponibles.textContent =
+        tarjetasDisponibles.length +
+        " de " +
+        totalTarjetas.length +
+        " salones disponibles";
 
 }
 
@@ -236,6 +268,33 @@ function filtrarSalones() {
 
 }
 
+// cambiar estado de un salon
+
+function cambiarEstadoSalon(nombreSalon) {
+
+    // buscar el salon dentro del arreglo
+    const salon = salones.find(function(s) {
+
+        return s.nombre === nombreSalon;
+
+    });
+
+    // si existe, se alterna su estado
+    if (salon) {
+
+        if (salon.estado === "Disponible") {
+            salon.estado = "Ocupado";
+        } else {
+            salon.estado = "Disponible";
+        }
+
+        // se vuelve a mostrar respetando el filtro/busqueda actual
+        filtrarSalones();
+
+    }
+
+}
+
 // eventos
 
 // buscar mientras se escribe
@@ -254,6 +313,26 @@ edificio.addEventListener(
 tipoSalon.addEventListener(
     "change",
     filtrarSalones
+);
+
+listaSalones.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            event.target.classList.contains(
+                "btn-estado-salon"
+            )
+        ) {
+
+            const nombreSalon =
+                event.target.dataset.nombre;
+
+            cambiarEstadoSalon(nombreSalon);
+
+        }
+
+    }
 );
 
 // mostrar todos los salones al cargar

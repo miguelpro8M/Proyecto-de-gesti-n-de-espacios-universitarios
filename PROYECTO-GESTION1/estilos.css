@@ -41,6 +41,19 @@ body {
 
 /* Logo */
 
+.figura-logo {
+
+    margin: 0;
+    text-align: center;
+}
+
+.figura-logo figcaption {
+
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+}
+
 .logo {
 
     width: 190px;
