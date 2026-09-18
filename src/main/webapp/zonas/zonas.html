@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zonas Recreativas | Gestión de Espacios</title>
+
+    <!-- CSS general -->
+    <link rel="stylesheet" href="../estilos.css">
+
+    <!-- CSS especifico de zonas -->
+    <link rel="stylesheet" href="zonas.css">
+
+</head>
+
+<body>
+
+    <main class="zonas-container">
+
+        <!-- Encabezado -->
+
+        <header class="zonas-header">
+
+            <div class="zonas-titulo">
+
+                <img
+                    src="../img/logo-etitc.jpg"
+                    alt="Logo de la ETITC"
+                    class="logo-zonas"
+                >
+
+                <div>
+                    <h1>Zonas recreativas</h1>
+
+                    <p>
+                        Gestión y consulta de espacios recreativos
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- boton regresar -->
+
+            <a href="../inicio.html" class="btn-regresar">
+                ← Volver al menú
+            </a>
+
+        </header>
+
+        <!-- Introducción -->
+        <section class="zonas-introduccion">
+
+            <h2>Consulta de zonas recreativas</h2>
+            <p>
+                Busque y consulte la informacion de los espacios
+                recreativos disponibles en la universidad.
+            </p>
+
+        </section>
+
+        <!-- buscador y filtros -->
+
+        <section class="filtros-zonas">
+
+            <!-- Buscar zona -->
+
+            <div class="filtro-zona">
+
+                <label for="buscarZona">
+                    Buscar zona
+                </label>
+
+                <input
+                    type="text"
+                    id="buscarZona"
+                    placeholder="Ejemplo: cancha"
+                >
+
+            </div>
+
+            <!-- tipo de zona -->
+
+            <div class="filtro-zona">
+
+                <label for="tipoZona">
+                    Tipo de zona
+                </label>
+
+                <select id="tipoZona">
+
+                    <option value="todos">
+                        Todos
+                    </option>
+
+                    <option value="deportiva">
+                        Deportiva
+                    </option>
+
+                    <option value="gimnasio">
+                        Gimnasio
+                    </option>
+
+                    <option value="recreativa">
+                        Recreativa
+                    </option>
+
+                    <option value="descanso">
+                        Descanso
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+        <!--lista de zonas -->
+
+        <section
+            id="listaZonas"
+            class="lista-zonas"
+        >
+
+        </section>
+
+        <!-- mensaje sin resultados -->
+
+        <p
+            id="sinResultadosZonas"
+            class="sin-resultados-zonas"
+        >
+            No se encontraron zonas con los criterios seleccionados.
+
+        </p>
+
+    </main>
+
+    <!-- JavaScript de zonas -->
+
+    <script src="zonas.js"></script>
+
+</body>
+
+</html>
