@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reportes | Gestión de Espacios</title>
+
+    <!-- CSS general -->
+    <link rel="stylesheet" href="../../estilos.css">
+
+    <!-- CSS de reportes -->
+    <link rel="stylesheet" href="reportes.css">
+
+    <script src="reportes.js" defer></script>
+
+</head>
+
+<body>
+
+    <main class="reportes-container">
+
+        <!-- encabezado -->
+
+        <header class="reportes-header">
+            <div class="reportes-titulo">
+
+                <img
+                    src="../../img/logo-etitc.jpg"
+                    alt="Logo de la ETITC"
+                    class="logo-reportes"
+                >
+                <div>
+
+                    <h1>Reportes</h1>
+                    <p>
+                        Registro de novedades en aulas y espacios
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- boton regresae -->
+
+            <a href="../../inicio.html" class="btn-regresar">
+                ← Volver al menú
+            </a>
+
+        </header>
+
+        <!-- introducciom -->
+
+        <section class="reportes-introduccion">
+
+            <h2>Registrar un reporte</h2>
+
+            <p>
+                Utilice este formulario para informar sobre daños,
+                problemas o novedades encontradas en los espacios
+                de la universidad.
+            </p>
+
+        </section>
+
+        <!-- formulario -->
+
+        <section class="formulario-reporte">
+            <form id="formularioReporte">
+
+                <!-- Tipo de espacio -->
+
+                <div class="campo-reporte">
+
+                    <label for="tipoEspacio">
+                        Tipo de espacio
+                    </label>
+
+                    <select id="tipoEspacio" required>
+
+                        <option value="">
+                            Seleccione una opción
+                        </option>
+
+                        <option value="Salón">
+                            Salón
+                        </option>
+
+                        <option value="Zona recreativa">
+                            Zona recreativa
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- espacio -->
+
+                <div class="campo-reporte">
+
+                    <label for="espacio">
+                        Espacio
+                    </label>
+
+                    <select id="espacio" required disabled>
+
+                        <option value="">
+                            Primero seleccione el tipo de espacio
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- tipo de reporte -->
+
+                <div class="campo-reporte">
+
+                    <label for="tipoReporte">
+                        Tipo de reporte
+                    </label>
+
+                    <select id="tipoReporte" required>
+
+                        <option value="">
+                            Seleccione una opción
+                        </option>
+
+                        <option value="Daño o avería">
+                            Daño o avería
+                        </option>
+
+                        <option value="Limpieza">
+                            Limpieza
+                        </option>
+
+                        <option value="Problema con equipos">
+                            Problema con equipos
+                        </option>
+
+                        <option value="Problema con mobiliario">
+                            Problema con mobiliario
+                        </option>
+
+                        <option value="Otro">
+                            Otro
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- prioridad -->
+
+                <div class="campo-reporte">
+
+                    <label for="prioridad">
+                        Prioridad
+                    </label>
+
+                    <select id="prioridad" required>
+
+                        <option value="">
+                            Seleccione una opción
+                        </option>
+
+                        <option value="Baja">
+                            Baja
+                        </option>
+
+                        <option value="Media">
+                            Media
+                        </option>
+
+                        <option value="Alta">
+                            Alta
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- descripcion -->
+
+                <div class="campo-reporte campo-completo">
+
+                    <label for="descripcion">
+                        Descripción del problema
+                    </label>
+
+                    <textarea
+                        id="descripcion"
+                        rows="6"
+                        placeholder="Describa detalladamente la novedad encontrada..."
+                        required
+                    ></textarea>
+
+                </div>
+
+                <!-- botones -->
+
+                <div class="botones-reporte">
+
+                    <button
+                        type="reset"
+                        class="btn-cancelar"
+                    >
+                        Limpiar
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn-enviar"
+                    >
+                        Enviar reporte
+                    </button>
+
+                </div>
+
+            </form>
+        </section>
+
+        <!-- peportes registrados -->
+
+        <section class="reportes-recientes">
+
+            <h2>Reportes registrados</h2>
+            <div id="listaReportes">
+                <p class="sin-reportes">
+                    No hay reportes registrados todavía.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
