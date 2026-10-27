@@ -1,3 +1,26 @@
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" errorPage="error.jsp" %>
+<%@ include file="/WEB-INF/sesion.jspf" %>
+<%
+    // request: lee el parametro "usuario" que llega por la URL (ejemplo: inicio.jsp?usuario=admin)
+    String usuario = request.getParameter("usuario");
+
+    if (usuario == null || usuario.isBlank()) {
+        // Si no llega por URL, se usa el usuario de la sesion (viene de sesion.jspf)
+        usuario = usuarioSesion;
+    }
+    usuario = usuario.trim();
+
+    // Evita que lo escrito en la URL se interprete como HTML
+    String usuarioSeguro = usuario.replace("&", "&amp;").replace("<", "&lt;")
+                                  .replace(">", "&gt;").replace("\"", "&quot;");
+
+    // response: agrega un encabezado HTTP (viaja en la respuesta, no se ve en pantalla)
+    response.setHeader("X-Proyecto", "Gestion de Aulas ETITC");
+
+    // application: primero se lee el usuario anterior y luego se guarda el actual.
+    // Es memoria compartida por toda la aplicacion, por eso no se guardan datos privados.
+    application.setAttribute("ultimoUsuario", usuarioSeguro);
+%>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -50,9 +73,16 @@
                 Bienvenido al sistema
             </h2>
 
+            <%
+                // out: escribe el saludo directamente en el HTML de respuesta
+                out.println("<p>Hola, <strong>" + usuarioSeguro + "</strong></p>");
+            %>
+
             <p>
                 Seleccione una opción para continuar.
             </p>
+
+            <p>Usuario activo en la sesión: <strong><%= usuarioSesion %></strong></p>
 
         </section>
 
@@ -65,7 +95,7 @@
 
             <!-- Salones -->
 
-            <a href="salones/salones.html" class="opcion">
+            <a href="salones/salones.jsp" class="opcion">
 
                 <div class="icono">🏫</div>
                 <h3> Salones</h3>
@@ -79,7 +109,7 @@
 
             <!-- Zonas recreativas -->
 
-            <a href="zonas/zonas.html" class="opcion">
+            <a href="zonas/zonas.jsp" class="opcion">
 
                 <div class="icono">⚽</div>
                 <h3>Zonas recreativas</h3>
@@ -92,7 +122,7 @@
 
             <!-- Reportes -->
 
-            <a href="salones/reportes/reportes.html" class="opcion">
+            <a href="reportes/reportes.jsp" class="opcion">
 
                 <div class="icono">📋</div>
                 <h3>Reportes</h3>
@@ -121,18 +151,12 @@
 
         <!-- Cerrar sesion -->
 
-        <button
-            id="btnCerrarSesion"
-            class="btn-cerrar"
-        >
-            Cerrar sesión
-        </button>
+        <form action="logout" method="post" style="margin:0;">
+            <button type="submit" class="btn-cerrar">Cerrar sesión</button>
+        </form>
 
 
     </main>
-
-
-    <script src="inicio.js" defer></script>
 
 </body>
 

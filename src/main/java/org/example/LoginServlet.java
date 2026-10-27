@@ -2,12 +2,15 @@ package org.example;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
@@ -19,49 +22,46 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-
         String usuario = request.getParameter("usuario");
         String password = request.getParameter("password");
 
-        // Validacion de campos obligatorios
-        if (usuario == null || usuario.trim().isEmpty()
-                || password == null || password.trim().isEmpty()) {
-            mostrarError(out, "Debe ingresar usuario y contrasena.");
-            return;
+        if (usuario == null || usuario.trim().isEmpty()) {
+            throw new UsuarioIncorrectoException("Debe ingresar el usuario.");
+        }
+        if (!usuario.trim().equals(USUARIO_VALIDO)) {
+            throw new UsuarioIncorrectoException("El usuario ingresado no está registrado en el sistema.");
         }
 
-        // Validacion de credenciales
-        if (usuario.equals(USUARIO_VALIDO) && password.equals(PASSWORD_VALIDA)) {
-            out.println("<html><head>");
-            out.println("<meta charset='UTF-8'>");
-            out.println("<link rel='stylesheet' href='estilos.css'>");
-            out.println("<meta http-equiv='refresh' content='2;url=inicio.html'>");
-            out.println("</head><body>");
-            out.println("<main class='login-container'>");
-            out.println("<section class='login-box'>");
-            out.println("<h1>Bienvenido, " + usuario + "</h1>");
-            out.println("<p>Inicio de sesion correcto. Redirigiendo al menu principal...</p>");
-            out.println("<p><a href='inicio.html'>Continuar ahora</a></p>");
-            out.println("</section>");
-            out.println("</main>");
-            out.println("</body></html>");
-        } else {
-            mostrarError(out, "Usuario o contrasena incorrectos.");
+        if (password == null || password.trim().isEmpty()) {
+            throw new PasswordIncorrectaException("Debe ingresar la contraseña.");
         }
-    }
+        if (!password.equals(PASSWORD_VALIDA)) {
+            throw new PasswordIncorrectaException("La contraseña ingresada es incorrecta.");
+        }
 
-    private void mostrarError(PrintWriter out, String mensaje) {
+        request.getSession().setAttribute("usuario", USUARIO_VALIDO);
+
+        Cookie cookie = new Cookie("ultimoUsuario", USUARIO_VALIDO);
+        cookie.setMaxAge(60 * 60 * 24 * 7);   // 7 dias
+        cookie.setHttpOnly(true);
+        response.addCookie(cookie);
+
+        String destino = "inicio.jsp?usuario="
+                + URLEncoder.encode(USUARIO_VALIDO, StandardCharsets.UTF_8);
+
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+
         out.println("<html><head>");
         out.println("<meta charset='UTF-8'>");
         out.println("<link rel='stylesheet' href='estilos.css'>");
+        out.println("<meta http-equiv='refresh' content='2;url=" + destino + "'>");
         out.println("</head><body>");
         out.println("<main class='login-container'>");
         out.println("<section class='login-box'>");
-        out.println("<h1>Error de inicio de sesion</h1>");
-        out.println("<p>" + mensaje + "</p>");
-        out.println("<p><a href='index.html'>Volver a intentar</a></p>");
+        out.println("<h1>Bienvenido, " + USUARIO_VALIDO + "</h1>");
+        out.println("<p>Inicio de sesion correcto. Redirigiendo al menu principal...</p>");
+        out.println("<p><a href='" + destino + "'>Continuar ahora</a></p>");
         out.println("</section>");
         out.println("</main>");
         out.println("</body></html>");

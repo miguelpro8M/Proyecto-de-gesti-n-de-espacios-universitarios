@@ -1,2 +1,5 @@
-org\example\ConsultaSalonServlet.class
+org\example\Conexion.class
+org\example\SalonDAO.class
 org\example\LoginServlet.class
+org\example\Salon.class
+org\example\ConsultaSalonServlet.class

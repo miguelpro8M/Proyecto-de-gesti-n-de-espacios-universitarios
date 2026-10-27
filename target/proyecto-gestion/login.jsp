@@ -1,3 +1,28 @@
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
+<%!
+// Evita que el valor de la cookie se interprete como HTML
+private String esc(String texto) {
+if (texto == null) {
+return "";
+}
+return texto.replace("&", "&amp;").replace("<", "&lt;")
+.replace(">", "&gt;").replace("\"", "&quot;");
+}
+%>
+<%
+// Cookie: si el navegador ya trae "ultimoUsuario", se usa para rellenar el campo
+String ultimoUsuario = "";
+Cookie[] cookies = request.getCookies();
+
+if (cookies != null) {
+for (Cookie c : cookies) {
+if (c.getName().equals("ultimoUsuario")) {
+ultimoUsuario = c.getValue();
+}
+}
+}
+%>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -49,6 +74,7 @@
                         id="usuario"
                         name="usuario"
                         placeholder="Ingrese su usuario"
+                        value="<%= esc(ultimoUsuario) %>"
                     >
 
                 </div>
@@ -70,11 +96,6 @@
 
                 </div>
 
-
-                <!-- Mensaje de error -->
-                <p id="mensajeError" class="mensaje-error"></p>
-
-
                 <!-- Boton -->
                 <button type="submit" class="btn-login">
                     Iniciar sesión
@@ -85,9 +106,6 @@
         </section>
 
     </main>
-
-
-    <script src="login.js"></script>
 
 </body>
 

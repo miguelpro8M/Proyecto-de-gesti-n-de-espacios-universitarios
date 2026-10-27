@@ -8,7 +8,7 @@
     <display-name>Sistema de Gestion de Aulas</display-name>
 
     <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
+        <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
 
     <servlet>
@@ -20,5 +20,21 @@
         <servlet-name>ConsultaSalonServlet</servlet-name>
         <url-pattern>/consulta-salon</url-pattern>
     </servlet-mapping>
+
+
+    <error-page>
+        <exception-type>org.example.UsuarioIncorrectoException</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>org.example.PasswordIncorrectaException</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.sql.SQLException</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
 
 </web-app>
