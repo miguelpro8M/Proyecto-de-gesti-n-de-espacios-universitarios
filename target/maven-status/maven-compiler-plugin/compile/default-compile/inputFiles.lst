@@ -2,9 +2,12 @@ C:\Users\migue\Documents\proyecto-gestion\src\main\java\org\example\Conexion.jav
 C:\Users\migue\Documents\proyecto-gestion\src\main\java\org\example\ConsultaSalonServlet.java
 C:\Users\migue\Documents\proyecto-gestion\src\main\java\org\example\LoginServlet.java
 C:\Users\migue\Documents\proyecto-gestion\src\main\java\org\example\LogoutServlet.java
+C:\Users\migue\Documents\proyecto-gestion\src\main\java\org\example\modelo\Reporte.java
 C:\Users\migue\Documents\proyecto-gestion\src\main\java\org\example\PasswordIncorrectaException.java
 C:\Users\migue\Documents\proyecto-gestion\src\main\java\org\example\ReporteServlet.java
 C:\Users\migue\Documents\proyecto-gestion\src\main\java\org\example\Salon.java
 C:\Users\migue\Documents\proyecto-gestion\src\main\java\org\example\SalonDAO.java
 C:\Users\migue\Documents\proyecto-gestion\src\main\java\org\example\SalonServlet.java
+C:\Users\migue\Documents\proyecto-gestion\src\main\java\org\example\servicio\ReporteService.java
+C:\Users\migue\Documents\proyecto-gestion\src\main\java\org\example\servicio\ReservaTemporal.java
 C:\Users\migue\Documents\proyecto-gestion\src\main\java\org\example\UsuarioIncorrectoException.java

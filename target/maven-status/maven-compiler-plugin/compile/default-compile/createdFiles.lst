@@ -1,5 +1,13 @@
 org\example\Conexion.class
+org\example\servicio\ReservaTemporal.class
 org\example\SalonDAO.class
-org\example\LoginServlet.class
 org\example\Salon.class
+org\example\servicio\ReporteService.class
+org\example\SalonServlet.class
+org\example\PasswordIncorrectaException.class
+org\example\LoginServlet.class
+org\example\LogoutServlet.class
+org\example\modelo\Reporte.class
+org\example\UsuarioIncorrectoException.class
 org\example\ConsultaSalonServlet.class
+org\example\ReporteServlet.class

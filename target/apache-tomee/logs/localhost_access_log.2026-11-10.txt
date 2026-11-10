@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [10/Nov/2026:14:50:25 -0500] "GET /proyecto-gestion/ HTTP/1.1" 200 2039
+0:0:0:0:0:0:0:1 - - [10/Nov/2026:14:50:25 -0500] "GET /proyecto-gestion/ HTTP/1.1" 200 2039
+0:0:0:0:0:0:0:1 - - [10/Nov/2026:14:50:28 -0500] "POST /proyecto-gestion/login HTTP/1.1" 200 425
+0:0:0:0:0:0:0:1 - - [10/Nov/2026:14:50:30 -0500] "GET /proyecto-gestion/inicio.jsp?usuario=admin HTTP/1.1" 200 2672
+0:0:0:0:0:0:0:1 - - [10/Nov/2026:14:50:32 -0500] "GET /proyecto-gestion/reportes HTTP/1.1" 200 4990
+0:0:0:0:0:0:0:1 - - [10/Nov/2026:14:50:32 -0500] "GET /proyecto-gestion/reportes/reportes.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [10/Nov/2026:14:50:32 -0500] "GET /proyecto-gestion/reportes/reportes.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [10/Nov/2026:14:50:49 -0500] "POST /proyecto-gestion/reportes HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Nov/2026:14:50:49 -0500] "GET /proyecto-gestion/reportes?ok=REP-0001 HTTP/1.1" 200 5949
+0:0:0:0:0:0:0:1 - - [10/Nov/2026:14:51:04 -0500] "GET /proyecto-gestion/reportes?ok=REP-0001 HTTP/1.1" 200 5949
+0:0:0:0:0:0:0:1 - - [10/Nov/2026:14:51:04 -0500] "GET /proyecto-gestion/reportes?ok=REP-0001 HTTP/1.1" 200 5949

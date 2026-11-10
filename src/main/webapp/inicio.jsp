@@ -122,7 +122,7 @@
 
             <!-- Reportes -->
 
-            <a href="reportes/reportes.jsp" class="opcion">
+            <a href="reportes" class="opcion">
 
                 <div class="icono">📋</div>
                 <h3>Reportes</h3>

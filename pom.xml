@@ -14,11 +14,12 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>jakarta.servlet</groupId>
-            <artifactId>jakarta.servlet-api</artifactId>
-            <version>6.0.0</version>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>10.0.0</version>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
@@ -27,5 +28,20 @@
     </dependencies>
     <build>
         <finalName>proyecto-gestion</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomee.maven</groupId>
+                <artifactId>tomee-maven-plugin</artifactId>
+                <version>10.2.0</version>
+                <configuration>
+                    <tomeeVersion>10.2.0</tomeeVersion>
+                    <tomeeClassifier>webprofile</tomeeClassifier>
+                    <context>proyecto-gestion</context>
+                    <libs>
+                        <lib>com.mysql:mysql-connector-j:8.4.0</lib>
+                    </libs>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>

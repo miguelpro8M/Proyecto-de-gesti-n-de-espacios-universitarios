@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomee>
+
+    <Resource id="gestionDS" type="DataSource">
+        JdbcDriver = com.mysql.cj.jdbc.Driver
+        JdbcUrl = jdbc:mysql://localhost:3306/gestion_espacios?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=America/Bogota
+        UserName = gestion_user
+        Password = gestion123
+        JtaManaged = true
+    </Resource>
+
+    <Resource id="gestionDSNoJta" type="DataSource">
+        JdbcDriver = com.mysql.cj.jdbc.Driver
+        JdbcUrl = jdbc:mysql://localhost:3306/gestion_espacios?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=America/Bogota
+        UserName = gestion_user
+        Password = gestion123
+        JtaManaged = false
+    </Resource>
+
+</tomee>

@@ -1,6 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
-         import="java.util.List, java.util.ArrayList" %>
-<%@ include file="/WEB-INF/sesion.jspf" %>
+         import="java.util.List, org.example.modelo.Reporte" %>
 
 <%!
     // Evita que texto escrito por el usuario se interprete como HTML
@@ -29,7 +28,7 @@
     String ok = request.getParameter("ok");
     String error = request.getParameter("error");
 
-    boolean registrado = ok != null && ok.matches("REP-\\d{4}");
+    boolean registrado = ok != null && ok.matches("REP-\\d+");
 
     String mensajeError = null;
     if ("campos".equals(error)) {
@@ -45,11 +44,8 @@
     String[] nombresZonas = {"Cancha 1", "Cancha 2", "Cancha 3", "Cancha 4", "Gimnasio",
                              "Zona de ping-pong", "Bolirana", "Juegos recreativos", "Biblioteca"};
 
-    // Los reportes los guarda ReporteServlet en 'application'
-    List<String[]> reportes = (List<String[]>) application.getAttribute("reportes");
-    if (reportes == null) {
-        reportes = new ArrayList<>();
-    }
+    // Los reportes los consulto ReporteServlet a la base de datos (mediante el EJB)
+    List<Reporte> reportes = (List<Reporte>) request.getAttribute("reportes");
 %>
 <!DOCTYPE html>
 <html lang="es">
@@ -92,7 +88,7 @@
 
             <% if (registrado) { %>
             <p class="mensaje-exito">
-                Reporte registrado correctamente. Número de reporte: <%= ok %>
+                Reporte registrado correctamente. Número de reporte: <%= esc(ok) %>
             </p>
             <% } %>
 
@@ -101,7 +97,7 @@
             <% } %>
 
             <!-- El formulario se envia por POST a ReporteServlet -->
-            <form id="formularioReporte" method="post" action="<%= ctx %>/registrar-reporte">
+            <form id="formularioReporte" method="post" action="<%= ctx %>/reportes">
 
                 <div class="campo-reporte">
                     <label for="tipoEspacio">Tipo de espacio</label>
@@ -164,30 +160,28 @@
 
             <div id="listaReportes">
 
-                <% if (reportes.isEmpty()) { %>
+                <% if (reportes == null || reportes.isEmpty()) { %>
 
                     <p class="sin-reportes">No hay reportes registrados todavía.</p>
 
                 <% } else { %>
-                    <%-- 0 numero | 1 tipo espacio | 2 espacio | 3 tipo reporte | 4 prioridad
-                         | 5 descripcion | 6 fecha | 7 hora | 8 estado --%>
-                    <% for (String[] r : reportes) { %>
+                    <% for (Reporte r : reportes) { %>
                     <article class="tarjeta-reporte">
 
                         <div class="reporte-cabecera">
-                            <h3><%= r[0] %></h3>
-                            <span class="estado-reporte"><%= r[8] %></span>
+                            <h3><%= r.getNumero() %></h3>
+                            <span class="estado-reporte"><%= r.getEstado() %></span>
                         </div>
 
-                        <p><strong>Información:</strong> <%= esc(r[0] + " - " + r[1] + " - " + r[2]) %></p>
-                        <p><strong>Tipo de reporte:</strong> <%= esc(r[3]) %></p>
+                        <p><strong>Información:</strong> <%= esc(r.mostrarInformacion()) %></p>
+                        <p><strong>Tipo de reporte:</strong> <%= esc(r.getTipoReporte()) %></p>
                         <p>
                             <strong>Prioridad:</strong>
-                            <span class="<%= clasePrioridad(r[4]) %>"><%= esc(r[4]) %></span>
+                            <span class="<%= clasePrioridad(r.getPrioridad()) %>"><%= esc(r.getPrioridad()) %></span>
                         </p>
-                        <p><strong>Descripción:</strong> <%= esc(r[5]) %></p>
+                        <p><strong>Descripción:</strong> <%= esc(r.getDescripcion()) %></p>
                         <p class="fecha-reporte">
-                            Registrado el <%= r[6] %> a las <%= r[7] %>
+                            Registrado el <%= r.getFecha() %> a las <%= r.getHora() %>
                         </p>
 
                     </article>
