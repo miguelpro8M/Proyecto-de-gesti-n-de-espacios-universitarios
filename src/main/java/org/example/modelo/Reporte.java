@@ -9,6 +9,8 @@ import jakarta.persistence.Table;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.ZoneId;
+import java.util.Date;
 
 // Entidad JPA: cada objeto Reporte es una fila de la tabla "reportes"
 @Entity
@@ -73,6 +75,9 @@ public class Reporte {
 
     public String getHora() {
         return fechaRegistro.format(DateTimeFormatter.ofPattern("HH:mm"));
+    }
+    public Date getFechaDate() {
+        return Date.from(fechaRegistro.atZone(ZoneId.systemDefault()).toInstant());
     }
 
     public String mostrarInformacion() {

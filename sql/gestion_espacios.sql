@@ -27,3 +27,19 @@ INSERT IGNORE INTO salones (nombre, edificio, piso, tipo, tipo_nombre, capacidad
 CREATE USER IF NOT EXISTS 'gestion_user'@'localhost' IDENTIFIED BY 'gestion123';
 GRANT ALL PRIVILEGES ON gestion_espacios.* TO 'gestion_user'@'localhost';
 FLUSH PRIVILEGES;
+
+
+
+USE gestion_espacios;
+
+CREATE TABLE IF NOT EXISTS reportes (
+                                        id             BIGINT       NOT NULL AUTO_INCREMENT,
+                                        tipo_espacio   VARCHAR(30)  NOT NULL,
+    espacio        VARCHAR(50)  NOT NULL,
+    tipo_reporte   VARCHAR(40)  NOT NULL,
+    prioridad      VARCHAR(10)  NOT NULL,
+    descripcion    VARCHAR(500) NOT NULL,
+    estado         VARCHAR(15)  NOT NULL DEFAULT 'Pendiente',
+    fecha_registro DATETIME     NOT NULL,
+    PRIMARY KEY (id)
+    );

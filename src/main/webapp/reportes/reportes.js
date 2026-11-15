@@ -1,5 +1,6 @@
-// Solo maneja la pantalla: el segundo select depende del primero.
-// El registro y la validacion de los reportes los hace ReporteServlet.
+// Solo maneja la pantalla: el segundo select depende del primero
+// El registro y la validacion de los reportes los hace ReporteServlet
+
 
 const formulario = document.getElementById("formularioReporte");
 const tipoEspacio = document.getElementById("tipoEspacio");
@@ -20,16 +21,20 @@ function cargarEspacios() {
 
     espacio.innerHTML = "";
 
+    const textoPrimero = espacio.dataset.textoPrimero || "Primero seleccione el tipo de espacio";
+    const textoElegir = espacio.dataset.textoElegir || "Seleccione un espacio";
+
     // si no selecciono nada
     if (tipoEspacio.value === "") {
         espacio.disabled = true;
-        agregarOpcion("", "Primero seleccione el tipo de espacio");
+        agregarOpcion("", textoPrimero);
         return;
     }
 
     espacio.disabled = false;
-    agregarOpcion("", "Seleccione un espacio");
+    agregarOpcion("", textoElegir);
 
+    // los nombres los entrega la JSP en atributos data-
     let lista = "";
 
     if (tipoEspacio.value === "Salón") {
@@ -50,7 +55,6 @@ function cargarEspacios() {
 
 
 tipoEspacio.addEventListener("change", cargarEspacios);
-
 
 
 formulario.addEventListener("reset", function () {
