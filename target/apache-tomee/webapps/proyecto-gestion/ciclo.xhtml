@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+
+<f:metadata>
+    <!-- Antes de dibujar la pagina: si no hay usuario en la sesion, va al login -->
+    <f:event type="preRenderView" listener="#{cicloBean.verificarSesion}" />
+</f:metadata>
+
+<h:head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ciclo de vida de JSF | Gestión de Espacios</title>
+    <link rel="stylesheet" href="#{request.contextPath}/estilos.css" />
+    <style>
+        .ciclo-contenedor { max-width: 860px; margin: 30px auto; padding: 26px;
+            background: #fff; border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .ciclo-contenedor h1 { margin-bottom: 8px; }
+        .ciclo-contenedor h2 { margin: 26px 0 10px 0; }
+        .texto-suave { color: #666; margin-bottom: 10px; line-height: 1.6; }
+        .etiqueta { font-weight: bold; display: block; margin-bottom: 6px; }
+        .ciclo-contenedor input[type="text"] { width: 100%; padding: 9px; border: 1px solid #ccc;
+            border-radius: 6px; font-size: 15px; }
+        .mensaje-error { color: #842029; font-weight: bold; display: block; margin: 6px 0 10px 0; }
+        .boton { padding: 10px 22px; background: #2f3640; color: #fff; border: 0;
+            border-radius: 8px; font-size: 15px; cursor: pointer; margin-top: 10px; }
+        .resultado { background: #d9f5df; color: #176b2c; padding: 12px 16px;
+            border-radius: 8px; margin-top: 16px; font-weight: bold; }
+        .estado { background: #eef1f5; padding: 10px 14px; border-radius: 8px; margin: 14px 0; }
+        .tabla { width: 100%; border-collapse: collapse; margin-top: 8px; }
+        .tabla th { background: #2f3640; color: #fff; text-align: left; padding: 9px; }
+        .tabla td { padding: 9px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+    </style>
+</h:head>
+
+<h:body>
+    <main class="ciclo-contenedor">
+
+        <h1>Ciclo de vida de JSF: consulta de salones</h1>
+        <p class="texto-suave">
+            Escriba el código de un salón (por ejemplo A-101). Mientras prueba, mire la consola
+            de TomEE: allí aparecen las fases que recorre cada petición.
+        </p>
+        <p class="texto-suave">
+            Usuario activo: <h:outputText value="#{sessionScope.usuario}" />
+            |
+            <h:outputLink value="#{request.contextPath}/inicio.jsp">← Volver al menú</h:outputLink>
+            |
+            <h:outputLink value="#{request.contextPath}/reservas.xhtml">Reservas (Semana 15)</h:outputLink>
+        </p>
+
+        <!-- Indica de que tipo es la peticion que dibujo esta pagina -->
+        <p class="estado">
+            Petición actual:
+            <strong><h:outputText value="#{facesContext.postback ? 'POST (postback)' : 'GET inicial'}" /></strong>
+            |
+            Consultas válidas en esta vista:
+            <strong><h:outputText value="#{cicloBean.consultas}" /></strong>
+        </p>
+
+        <h:form id="formulario">
+
+            <h:outputLabel for="codigo" value="Código del salón" styleClass="etiqueta" />
+
+            <h:inputText id="codigo" value="#{cicloBean.codigo}"
+                         required="true"
+                         requiredMessage="El código del salón es obligatorio."
+                         validatorMessage="El código debe tener entre 3 y 10 caracteres.">
+                <f:validateLength minimum="3" maximum="10" />
+            </h:inputText>
+
+            <!-- Mensaje de error de ESTE campo -->
+            <h:message for="codigo" styleClass="mensaje-error" />
+
+            <h:commandButton value="Consultar salón" action="#{cicloBean.consultar}" styleClass="boton" />
+
+        </h:form>
+
+        <h:outputText value="#{cicloBean.resultado}" styleClass="resultado" style="display:block;"
+                      rendered="#{not empty cicloBean.resultado and not facesContext.validationFailed}" />
+
+        <h2>Qué fases ve en la consola</h2>
+        <table class="tabla">
+            <tr>
+                <th>Petición</th>
+                <th>Fases que se recorren</th>
+            </tr>
+            <tr>
+                <td>GET inicial (abrir la página)</td>
+                <td>RESTORE_VIEW, RENDER_RESPONSE. No se valida ni se ejecuta la acción.</td>
+            </tr>
+            <tr>
+                <td>POST válido (código A-101)</td>
+                <td>RESTORE_VIEW, APPLY_REQUEST_VALUES, PROCESS_VALIDATIONS, UPDATE_MODEL_VALUES,
+                    INVOKE_APPLICATION, RENDER_RESPONSE.</td>
+            </tr>
+            <tr>
+                <td>POST inválido (vacío o "Al")</td>
+                <td>RESTORE_VIEW, APPLY_REQUEST_VALUES, PROCESS_VALIDATIONS y salta a RENDER_RESPONSE.
+                    No se actualiza el bean ni se ejecuta consultar().</td>
+            </tr>
+        </table>
+
+    </main>
+</h:body>
+
+</html>

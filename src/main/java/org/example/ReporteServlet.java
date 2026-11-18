@@ -50,7 +50,6 @@ public class ReporteServlet extends HttpServlet {
         // Todos los reportes (sirven para las estadisticas)
         List<Reporte> todos = servicio.listar();
 
-        // Filtro opcional: /reportes?prioridad=Alta (si el valor no es valido, se ignora)
         String prioridad = limpiar(request.getParameter("prioridad"));
         List<Reporte> reportes = todos;
 
@@ -60,7 +59,6 @@ public class ReporteServlet extends HttpServlet {
                     .collect(Collectors.toList());
         }
 
-        // Estadistica: fraccion de reportes con prioridad alta (la JSP la formatea como porcentaje)
         long totalAlta = todos.stream().filter(r -> r.getPrioridad().equals("Alta")).count();
         double porcentajeAlta = todos.isEmpty() ? 0 : (double) totalAlta / todos.size();
 

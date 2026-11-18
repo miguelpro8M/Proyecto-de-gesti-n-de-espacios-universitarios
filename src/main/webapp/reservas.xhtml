@@ -5,7 +5,6 @@
       xmlns:f="jakarta.faces.core">
 
 <f:metadata>
-    <!-- Antes de dibujar la pagina: si no hay usuario en la sesion, va al login -->
     <f:event type="preRenderView" listener="#{reservas.verificarSesion}" />
 </f:metadata>
 
@@ -50,6 +49,9 @@
             Usuario activo: <h:outputText value="#{sessionScope.usuario}" />
             |
             <h:outputLink value="#{request.contextPath}/inicio.jsp">← Volver al menú</h:outputLink>
+
+            |
+            <h:outputLink value="#{request.contextPath}/ciclo.xhtml">Ciclo de vida (Semana 16)</h:outputLink>
         </p>
 
         <h:form id="formulario">

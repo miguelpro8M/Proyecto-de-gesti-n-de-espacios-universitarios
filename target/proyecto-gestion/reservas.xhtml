@@ -2,114 +2,39 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="jakarta.faces.html"
-      xmlns:f="jakarta.faces.core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="jakarta.faces.core ">
+      xmlns:f="jakarta.faces.core">
 
 <f:metadata>
-    <!-- Antes de dibujar la pagina: si no hay usuario en la sesion, va al login -->
-    <f:event type="preRenderView" listener="#{reservas.verificarSesion}"/>
+    <f:event type="preRenderView" listener="#{reservas.verificarSesion}" />
 </f:metadata>
 
 <h:head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reservas de salones | Gestión de Espacios</title>
-    <link rel="stylesheet" href="#{request.contextPath}/estilos.css"/>
+    <link rel="stylesheet" href="#{request.contextPath}/estilos.css" />
     <style>
-        .reservas-contenedor {
-            max-width: 820px;
-            margin: 30px auto;
-            padding: 26px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        .reservas-contenedor h1 {
-            margin-bottom: 8px;
-        }
-
-        .reservas-contenedor h2 {
-            margin: 24px 0 12px 0;
-        }
-
-        .texto-suave {
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .campos {
-            width: 100%;
-            margin: 14px 0;
-        }
-
-        .campos td {
-            padding: 8px 4px;
-        }
-
-        .etiqueta {
-            width: 38%;
-            font-weight: bold;
-        }
-
-        .campos input, .campos select {
-            width: 100%;
-            padding: 9px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 15px;
-        }
-
-        .boton {
-            padding: 10px 22px;
-            background: #2f3640;
-            color: #fff;
-            border: 0;
-            border-radius: 8px;
-            font-size: 15px;
-            cursor: pointer;
-        }
-
-        .reservas-contenedor ul {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 12px 0;
-        }
-
-        .mensaje-exito {
-            background: #d9f5df;
-            color: #176b2c;
-            padding: 10px 14px;
-            border-radius: 8px;
-            margin-bottom: 6px;
-            font-weight: bold;
-        }
-
-        .mensaje-error {
-            background: #f8d7da;
-            color: #842029;
-            padding: 10px 14px;
-            border-radius: 8px;
-            margin-bottom: 6px;
-            font-weight: bold;
-        }
-
-        .tabla {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .tabla th {
-            background: #2f3640;
-            color: #fff;
-            text-align: left;
-            padding: 10px;
-        }
-
-        .tabla td {
-            padding: 10px;
-            border-bottom: 1px solid #e5e7eb;
-        }
+        .reservas-contenedor { max-width: 820px; margin: 30px auto; padding: 26px;
+            background: #fff; border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .reservas-contenedor h1 { margin-bottom: 8px; }
+        .reservas-contenedor h2 { margin: 24px 0 12px 0; }
+        .texto-suave { color: #666; margin-bottom: 10px; }
+        .campos { width: 100%; margin: 14px 0; }
+        .campos td { padding: 8px 4px; }
+        .etiqueta { width: 38%; font-weight: bold; }
+        .campos input, .campos select { width: 100%; padding: 9px; border: 1px solid #ccc;
+            border-radius: 6px; font-size: 15px; }
+        .boton { padding: 10px 22px; background: #2f3640; color: #fff; border: 0;
+            border-radius: 8px; font-size: 15px; cursor: pointer; }
+        .reservas-contenedor ul { list-style: none; padding: 0; margin: 0 0 12px 0; }
+        .mensaje-exito { background: #d9f5df; color: #176b2c; padding: 10px 14px;
+            border-radius: 8px; margin-bottom: 6px; font-weight: bold; }
+        .mensaje-error { background: #f8d7da; color: #842029; padding: 10px 14px;
+            border-radius: 8px; margin-bottom: 6px; font-weight: bold; }
+        .tabla { width: 100%; border-collapse: collapse; }
+        .tabla th { background: #2f3640; color: #fff; text-align: left; padding: 10px; }
+        .tabla td { padding: 10px; border-bottom: 1px solid #e5e7eb; }
     </style>
 </h:head>
 
@@ -121,76 +46,76 @@
             Registre una solicitud de reserva. Los datos se conservan mientras dure su sesión.
         </p>
         <p class="texto-suave">
-            Usuario activo:
-            <h:outputText value="#{sessionScope.usuario}"/>
+            Usuario activo: <h:outputText value="#{sessionScope.usuario}" />
             |
             <h:outputLink value="#{request.contextPath}/inicio.jsp">← Volver al menú</h:outputLink>
+
+            |
+            <h:outputLink value="#{request.contextPath}/ciclo.xhtml">Ciclo de vida (Semana 16)</h:outputLink>
         </p>
 
         <h:form id="formulario">
 
             <!-- Muestra los mensajes de validacion y de exito -->
-            <h:messages id="mensajes" infoClass="mensaje-exito" errorClass="mensaje-error"/>
+            <h:messages id="mensajes" infoClass="mensaje-exito" errorClass="mensaje-error" />
 
             <h:panelGrid columns="2" styleClass="campos" columnClasses="etiqueta,campo">
 
-                <h:outputLabel for="solicitante" value="Nombre del solicitante"/>
+                <h:outputLabel for="solicitante" value="Nombre del solicitante" />
                 <h:inputText id="solicitante" value="#{reservas.solicitante}"
                              required="true"
                              requiredMessage="El nombre del solicitante es obligatorio."
                              validatorMessage="El nombre debe tener entre 3 y 60 caracteres.">
-                    <f:validateLength minimum="3" maximum="60"/>
+                    <f:validateLength minimum="3" maximum="60" />
                 </h:inputText>
 
-                <h:outputLabel for="salon" value="Salón"/>
+                <h:outputLabel for="salon" value="Salón" />
                 <h:selectOneMenu id="salon" value="#{reservas.salon}"
                                  required="true"
                                  requiredMessage="Seleccione un salón.">
-                    <f:selectItem itemLabel="-- Seleccione --" itemValue="" noSelectionOption="true"/>
-                    <f:selectItems value="#{reservas.salonesDisponibles}"/>
+                    <f:selectItem itemLabel="-- Seleccione --" itemValue="" noSelectionOption="true" />
+                    <f:selectItems value="#{reservas.salonesDisponibles}" />
                 </h:selectOneMenu>
 
-                <h:outputLabel for="horas" value="Horas de reserva (1 a 8)"/>
+                <h:outputLabel for="horas" value="Horas de reserva (1 a 8)" />
                 <h:inputText id="horas" value="#{reservas.horas}"
                              required="true"
                              requiredMessage="Las horas son obligatorias."
                              converterMessage="Las horas deben ser un número entero."
                              validatorMessage="Las horas deben estar entre 1 y 8.">
-                    <f:validateLongRange minimum="1" maximum="8"/>
+                    <f:validateLongRange minimum="1" maximum="8" />
                 </h:inputText>
 
             </h:panelGrid>
 
-            <h:commandButton value="Agregar reserva" action="#{reservas.agregar}" styleClass="boton"/>
+            <h:commandButton value="Agregar reserva" action="#{reservas.agregar}" styleClass="boton" />
 
         </h:form>
 
-        <h2>Total de reservas:
-            <h:outputText value="#{reservas.total}"/>
-        </h2>
+        <h2>Total de reservas: <h:outputText value="#{reservas.total}" /></h2>
 
         <h:dataTable id="tabla" value="#{reservas.lista}" var="r"
                      rendered="#{reservas.total gt 0}" styleClass="tabla">
 
             <h:column>
                 <f:facet name="header">Solicitante</f:facet>
-                <h:outputText value="#{r.solicitante}"/>
+                <h:outputText value="#{r.solicitante}" />
             </h:column>
 
             <h:column>
                 <f:facet name="header">Salón</f:facet>
-                <h:outputText value="#{r.salon}"/>
+                <h:outputText value="#{r.salon}" />
             </h:column>
 
             <h:column>
                 <f:facet name="header">Horas</f:facet>
-                <h:outputText value="#{r.horas}"/>
+                <h:outputText value="#{r.horas}" />
             </h:column>
 
         </h:dataTable>
 
         <h:outputText value="Aún no hay reservas registradas." styleClass="texto-suave"
-                      rendered="#{reservas.total eq 0}"/>
+                      rendered="#{reservas.total eq 0}" />
 
     </main>
 </h:body>

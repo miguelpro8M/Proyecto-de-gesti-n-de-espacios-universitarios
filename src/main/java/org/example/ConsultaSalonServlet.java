@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-// Registrado en web.xml con la ruta /consulta-salon (Semana 7)
 public class ConsultaSalonServlet extends HttpServlet {
 
     @Override

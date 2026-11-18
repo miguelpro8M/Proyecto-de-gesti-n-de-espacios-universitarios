@@ -5,11 +5,13 @@ org\example\Salon.class
 org\example\servicio\ReporteService.class
 org\example\SalonServlet.class
 org\example\PasswordIncorrectaException.class
+org\example\faces\RastreoFases.class
 org\example\LoginServlet.class
 org\example\LogoutServlet.class
 org\example\modelo\Reporte.class
 org\example\modelo\Reserva.class
 org\example\faces\ReservaBean.class
 org\example\UsuarioIncorrectoException.class
+org\example\faces\CicloBean.class
 org\example\ConsultaSalonServlet.class
 org\example\ReporteServlet.class
