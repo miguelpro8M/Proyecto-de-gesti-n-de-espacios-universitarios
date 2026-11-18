@@ -1,7 +1,6 @@
-// Solo maneja la pantalla: el segundo select depende del primero.
-// El registro y la validacion de los reportes los hace ReporteServlet.
-// Los textos y los nombres llegan desde la JSP en atributos data-
-// (asi se traducen igual que el resto de la pagina).
+// Solo maneja la pantalla: el segundo select depende del primero
+// El registro y la validacion de los reportes los hace ReporteServlet
+
 
 const formulario = document.getElementById("formularioReporte");
 const tipoEspacio = document.getElementById("tipoEspacio");
@@ -57,9 +56,6 @@ function cargarEspacios() {
 
 tipoEspacio.addEventListener("change", cargarEspacios);
 
-
-// el boton Limpiar: se espera a que el navegador limpie los campos
-// y despues se reinicia el segundo select
 
 formulario.addEventListener("reset", function () {
     setTimeout(cargarEspacios, 0);

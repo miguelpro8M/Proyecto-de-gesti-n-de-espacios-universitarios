@@ -94,6 +94,10 @@
             <p>Busque y consulte la información de los salones disponibles en la universidad.</p>
         </section>
 
+        <p style="margin-bottom:20px;">
+            <a href="<%= ctx %>/reservas.xhtml">Solicitar una reserva de salón (JSF)</a>
+        </p>
+
         <!-- Filtros: los aplica salones.js en el navegador -->
         <section class="filtros">
 

@@ -8,6 +8,8 @@ org\example\PasswordIncorrectaException.class
 org\example\LoginServlet.class
 org\example\LogoutServlet.class
 org\example\modelo\Reporte.class
+org\example\modelo\Reserva.class
+org\example\faces\ReservaBean.class
 org\example\UsuarioIncorrectoException.class
 org\example\ConsultaSalonServlet.class
 org\example\ReporteServlet.class
