@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [19/Nov/2026:12:49:13 -0500] "GET /proyecto-gestion/ciclo.xhtml HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [19/Nov/2026:12:49:13 -0500] "GET /proyecto-gestion/login.jsp HTTP/1.1" 200 2039
+0:0:0:0:0:0:0:1 - - [19/Nov/2026:12:49:16 -0500] "POST /proyecto-gestion/login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [19/Nov/2026:12:49:16 -0500] "GET /proyecto-gestion/bienvenida.jsp HTTP/1.1" 200 665
+0:0:0:0:0:0:0:1 - - [19/Nov/2026:12:49:19 -0500] "GET /proyecto-gestion/inicio.jsp HTTP/1.1" 200 2672
+0:0:0:0:0:0:0:1 - - [19/Nov/2026:12:49:21 -0500] "GET /proyecto-gestion/salones/salones.jsp HTTP/1.1" 200 15238
+0:0:0:0:0:0:0:1 - - [19/Nov/2026:12:49:22 -0500] "GET /proyecto-gestion/reservas.xhtml HTTP/1.1" 200 3946
+0:0:0:0:0:0:0:1 - - [19/Nov/2026:12:49:23 -0500] "GET /proyecto-gestion/ciclo.xhtml HTTP/1.1" 200 4062

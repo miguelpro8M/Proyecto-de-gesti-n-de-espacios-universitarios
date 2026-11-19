@@ -41,15 +41,14 @@
 
         <h1>Ciclo de vida de JSF: consulta de salones</h1>
         <p class="texto-suave">
-            Escriba el código de un salón (por ejemplo A-101). Mientras prueba, mire la consola
-            de TomEE: allí aparecen las fases que recorre cada petición.
+            Escriba el codigo de un salon.
         </p>
         <p class="texto-suave">
             Usuario activo: <h:outputText value="#{sessionScope.usuario}" />
             |
             <h:outputLink value="#{request.contextPath}/inicio.jsp">← Volver al menú</h:outputLink>
             |
-            <h:outputLink value="#{request.contextPath}/reservas.xhtml">Reservas (Semana 15)</h:outputLink>
+            <h:outputLink value="#{request.contextPath}/reservas.xhtml">Reservas</h:outputLink>
         </p>
 
         <!-- Indica de que tipo es la peticion que dibujo esta pagina -->

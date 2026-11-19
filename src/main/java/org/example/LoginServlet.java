@@ -8,9 +8,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
@@ -25,13 +22,14 @@ public class LoginServlet extends HttpServlet {
         String usuario = request.getParameter("usuario");
         String password = request.getParameter("password");
 
+        // error 1
         if (usuario == null || usuario.trim().isEmpty()) {
             throw new UsuarioIncorrectoException("Debe ingresar el usuario.");
         }
         if (!usuario.trim().equals(USUARIO_VALIDO)) {
             throw new UsuarioIncorrectoException("El usuario ingresado no está registrado en el sistema.");
         }
-
+        // error 2
         if (password == null || password.trim().isEmpty()) {
             throw new PasswordIncorrectaException("Debe ingresar la contraseña.");
         }
@@ -41,29 +39,12 @@ public class LoginServlet extends HttpServlet {
 
         request.getSession().setAttribute("usuario", USUARIO_VALIDO);
 
+        // Cookie: recuerda el ultimo usuario
         Cookie cookie = new Cookie("ultimoUsuario", USUARIO_VALIDO);
-        cookie.setMaxAge(60 * 60 * 24 * 7);   // 7 dias
+        cookie.setMaxAge(60 * 60 * 24 * 7);
         cookie.setHttpOnly(true);
         response.addCookie(cookie);
 
-        String destino = "inicio.jsp?usuario="
-                + URLEncoder.encode(USUARIO_VALIDO, StandardCharsets.UTF_8);
-
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-
-        out.println("<html><head>");
-        out.println("<meta charset='UTF-8'>");
-        out.println("<link rel='stylesheet' href='estilos.css'>");
-        out.println("<meta http-equiv='refresh' content='2;url=" + destino + "'>");
-        out.println("</head><body>");
-        out.println("<main class='login-container'>");
-        out.println("<section class='login-box'>");
-        out.println("<h1>Bienvenido, " + USUARIO_VALIDO + "</h1>");
-        out.println("<p>Inicio de sesion correcto. Redirigiendo al menu principal...</p>");
-        out.println("<p><a href='" + destino + "'>Continuar ahora</a></p>");
-        out.println("</section>");
-        out.println("</main>");
-        out.println("</body></html>");
+        response.sendRedirect(request.getContextPath() + "/bienvenida.jsp");
     }
 }

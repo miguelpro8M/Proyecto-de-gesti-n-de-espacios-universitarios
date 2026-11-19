@@ -1,0 +1,196 @@
+19-Nov-2026 12:49:02.916 INFO [main] java.lang.reflect.Method.invoke Nombre de la versión del servidor: Apache Tomcat (TomEE)/10.1.57 (10.2.0)
+19-Nov-2026 12:49:02.917 INFO [main] java.lang.reflect.Method.invoke Server built:                      Jul 3 2026 13:06:05 UTC
+19-Nov-2026 12:49:02.917 INFO [main] java.lang.reflect.Method.invoke Número de versión de servidor:     10.1.57.0
+19-Nov-2026 12:49:02.917 INFO [main] java.lang.reflect.Method.invoke OS Name:                           Windows 11
+19-Nov-2026 12:49:02.917 INFO [main] java.lang.reflect.Method.invoke Versión de Systema Operativo:      10.0
+19-Nov-2026 12:49:02.917 INFO [main] java.lang.reflect.Method.invoke Arquitectura:                      amd64
+19-Nov-2026 12:49:02.917 INFO [main] java.lang.reflect.Method.invoke Java Home:                         C:\Program Files\Java\jdk-24
+19-Nov-2026 12:49:02.918 INFO [main] java.lang.reflect.Method.invoke JVM Version:                       24+36-3646
+19-Nov-2026 12:49:02.918 INFO [main] java.lang.reflect.Method.invoke Vededor JVM:                       Oracle Corporation
+19-Nov-2026 12:49:02.918 INFO [main] java.lang.reflect.Method.invoke CATALINA_BASE:                     C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee
+19-Nov-2026 12:49:02.918 INFO [main] java.lang.reflect.Method.invoke CATALINA_HOME:                     C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee
+19-Nov-2026 12:49:02.929 INFO [main] java.lang.reflect.Method.invoke Command line argument:             -XX:+HeapDumpOnOutOfMemoryError
+19-Nov-2026 12:49:02.929 INFO [main] java.lang.reflect.Method.invoke Command line argument:             -Dorg.apache.catalina.STRICT_SERVLET_COMPLIANCE=false
+19-Nov-2026 12:49:02.929 INFO [main] java.lang.reflect.Method.invoke Command line argument:             -Dopenejb.session.manager=org.apache.tomee.catalina.session.QuickSessionManager
+19-Nov-2026 12:49:02.929 INFO [main] java.lang.reflect.Method.invoke Command line argument:             -Dtomee.remote.support=true
+19-Nov-2026 12:49:02.929 INFO [main] java.lang.reflect.Method.invoke Command line argument:             -Dopenejb.system.apps=false
+19-Nov-2026 12:49:02.929 INFO [main] java.lang.reflect.Method.invoke Command line argument:             -Dtomee.jsp-development=true
+19-Nov-2026 12:49:02.929 INFO [main] java.lang.reflect.Method.invoke Command line argument:             -Djava.util.logging.config.file=C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee\conf\logging.properties
+19-Nov-2026 12:49:02.930 INFO [main] java.lang.reflect.Method.invoke Command line argument:             -javaagent:C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee\lib\openejb-javaagent.jar
+19-Nov-2026 12:49:02.930 INFO [main] java.lang.reflect.Method.invoke Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2026 12:49:02.930 INFO [main] java.lang.reflect.Method.invoke Command line argument:             -Djava.io.tmpdir=C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee\temp
+19-Nov-2026 12:49:02.930 INFO [main] java.lang.reflect.Method.invoke Command line argument:             -Dcatalina.base=C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee
+19-Nov-2026 12:49:02.930 INFO [main] java.lang.reflect.Method.invoke Command line argument:             -Dcatalina.home=C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee
+19-Nov-2026 12:49:02.930 INFO [main] java.lang.reflect.Method.invoke Command line argument:             -Dcatalina.ext.dirs=C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee\lib
+19-Nov-2026 12:49:02.930 INFO [main] java.lang.reflect.Method.invoke Command line argument:             -Dorg.apache.tomcat.util.http.ServerCookie.ALLOW_HTTP_SEPARATORS_IN_V0=true
+19-Nov-2026 12:49:02.930 INFO [main] java.lang.reflect.Method.invoke Command line argument:             -ea
+19-Nov-2026 12:49:02.930 INFO [main] java.lang.reflect.Method.invoke Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Nov-2026 12:49:02.930 INFO [main] java.lang.reflect.Method.invoke Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+19-Nov-2026 12:49:02.930 INFO [main] java.lang.reflect.Method.invoke Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+19-Nov-2026 12:49:02.930 INFO [main] java.lang.reflect.Method.invoke Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Nov-2026 12:49:02.930 INFO [main] java.lang.reflect.Method.invoke Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Nov-2026 12:49:02.930 INFO [main] java.lang.reflect.Method.invoke Command line argument:             --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED
+19-Nov-2026 12:49:02.930 INFO [main] java.lang.reflect.Method.invoke Command line argument:             --add-opens=java.base/java.net=ALL-UNNAMED
+19-Nov-2026 12:49:02.944 INFO [main] java.lang.reflect.Method.invoke La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: [C:\Program Files\Java\jdk-24\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files (x86)\PuTTY\;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files\Git\cmd;C:\Users\migue\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\migue\AppData\Local\Programs\Python\Python313\;C:\Users\migue\AppData\Local\Microsoft\WindowsApps;C:\Users\migue\AppData\Local\Programs\Microsoft VS Code\bin;.]
+19-Nov-2026 12:49:03.185 INFO [main] java.lang.reflect.Method.invoke Inicializando el manejador de protocolo ["http-nio-8080"]
+
+19-Nov-2026 12:49:03.445 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.remote.support=true'
+19-Nov-2026 12:49:03.456 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'openejb.jdbc.datasource-creator=org.apache.tomee.jdbc.TomEEDataSourceCreator'
+19-Nov-2026 12:49:03.545 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> ********************************************************************************
+19-Nov-2026 12:49:03.545 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> OpenEJB http://tomee.apache.org/
+19-Nov-2026 12:49:03.545 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Startup: Thu Nov 19 12:49:03 GMT-05:00 2026
+19-Nov-2026 12:49:03.546 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Copyright 1999-2026 (C) Apache TomEE Project, All Rights Reserved.
+19-Nov-2026 12:49:03.546 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Version: 10.2.0
+19-Nov-2026 12:49:03.546 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Build date: 20260714
+19-Nov-2026 12:49:03.546 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> Build time: 10:26
+19-Nov-2026 12:49:03.546 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> ********************************************************************************
+19-Nov-2026 12:49:03.546 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> openejb.home = C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee
+19-Nov-2026 12:49:03.547 INFO [main] org.apache.openejb.OpenEJB$Instance.<init> openejb.base = C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee
+19-Nov-2026 12:49:03.548 INFO [main] org.apache.openejb.cdi.CdiBuilder.initializeOWB Created new singletonService org.apache.openejb.cdi.ThreadSingletonServiceImpl@6f19ac19
+19-Nov-2026 12:49:03.550 INFO [main] org.apache.openejb.cdi.CdiBuilder.initializeOWB Succeeded in installing singleton service
+19-Nov-2026 12:49:03.576 INFO [main] org.apache.openejb.config.ConfigurationFactory.init TomEE configuration file is 'C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee\conf\tomee.xml'
+19-Nov-2026 12:49:03.605 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Tomcat Security Service, type=SecurityService, provider-id=Tomcat Security Service)
+19-Nov-2026 12:49:03.607 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+19-Nov-2026 12:49:03.608 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=gestionDS, type=Resource, provider-id=Default JDBC Database)
+19-Nov-2026 12:49:03.608 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=gestionDSNoJta, type=Resource, provider-id=Default JDBC Database)
+19-Nov-2026 12:49:03.610 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'openejb.system.apps=false'
+19-Nov-2026 12:49:03.610 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'openejb.deployments.classpath=false'
+19-Nov-2026 12:49:03.612 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating TransactionManager(id=Default Transaction Manager)
+19-Nov-2026 12:49:03.669 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating SecurityService(id=Tomcat Security Service)
+19-Nov-2026 12:49:03.702 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Resource(id=gestionDS)
+19-Nov-2026 12:49:03.973 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Resource(id=gestionDSNoJta)
+19-Nov-2026 12:49:04.072 INFO [main] org.apache.openejb.server.ServiceManager.initServer Creating ServerService(id=cxf)
+19-Nov-2026 12:49:04.293 INFO [main] org.apache.openejb.server.ServiceManager.initServer Creating ServerService(id=cxf-rs)
+19-Nov-2026 12:49:04.361 INFO [main] org.apache.openejb.server.SimpleServiceManager.start   ** Bound Services **
+19-Nov-2026 12:49:04.362 INFO [main] org.apache.openejb.server.SimpleServiceManager.printRow   NAME                 IP              PORT  
+19-Nov-2026 12:49:04.362 INFO [main] org.apache.openejb.server.SimpleServiceManager.start -------
+19-Nov-2026 12:49:04.362 INFO [main] org.apache.openejb.server.SimpleServiceManager.start Ready!
+19-Nov-2026 12:49:04.363 INFO [main] java.lang.reflect.Method.invoke Server initialization in [1691] milliseconds
+19-Nov-2026 12:49:04.404 INFO [main] org.apache.tomee.catalina.OpenEJBNamingContextListener.bindResource Importing a Tomcat Resource with id 'UserDatabase' of type 'org.apache.catalina.UserDatabase'.
+19-Nov-2026 12:49:04.408 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Resource(id=UserDatabase)
+19-Nov-2026 12:49:04.431 INFO [main] java.lang.reflect.Method.invoke Arrancando servicio [Catalina]
+19-Nov-2026 12:49:04.432 INFO [main] java.lang.reflect.Method.invoke Starting Servlet engine: [Apache Tomcat (TomEE)/10.1.57 (10.2.0)]
+19-Nov-2026 12:49:04.470 INFO [main] java.lang.reflect.Method.invoke Despliegue del archivo [C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee\webapps\proyecto-gestion.war] de la aplicación web
+19-Nov-2026 12:49:04.479 INFO [main] org.apache.tomee.catalina.TomcatWebAppBuilder.init ------------------------- localhost -> /proyecto-gestion
+19-Nov-2026 12:49:04.484 INFO [main] org.apache.openejb.util.JarExtractor.extract Extracting jar: C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee\webapps\proyecto-gestion.war
+19-Nov-2026 12:49:04.927 INFO [main] org.apache.openejb.util.JarExtractor.extract Extracted path: C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee\webapps\proyecto-gestion
+19-Nov-2026 12:49:04.927 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'openejb.session.manager=org.apache.tomee.catalina.session.QuickSessionManager'
+19-Nov-2026 12:49:05.433 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureApplication Configuring enterprise application: C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee\webapps\proyecto-gestion
+19-Nov-2026 12:49:05.619 INFO [main] org.apache.openejb.config.InitEjbDeployments.deploy Auto-deploying ejb ReporteService: EjbDeployment(deployment-id=ReporteService)
+19-Nov-2026 12:49:05.619 INFO [main] org.apache.openejb.config.InitEjbDeployments.deploy Auto-deploying ejb ReservaTemporal: EjbDeployment(deployment-id=ReservaTemporal)
+19-Nov-2026 12:49:05.626 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default Stateless Container, type=Container, provider-id=Default Stateless Container)
+19-Nov-2026 12:49:05.627 INFO [main] org.apache.openejb.config.AutoConfig.createContainer Auto-creating a container for bean ReporteService: Container(type=STATELESS, id=Default Stateless Container)
+19-Nov-2026 12:49:05.627 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Container(id=Default Stateless Container)
+19-Nov-2026 12:49:05.645 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default Stateful Container, type=Container, provider-id=Default Stateful Container)
+19-Nov-2026 12:49:05.645 INFO [main] org.apache.openejb.config.AutoConfig.createContainer Auto-creating a container for bean ReservaTemporal: Container(type=STATEFUL, id=Default Stateful Container)
+19-Nov-2026 12:49:05.646 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Container(id=Default Stateful Container)
+19-Nov-2026 12:49:05.675 INFO [main] org.apache.openejb.core.stateful.SimplePassivater.init Using directory C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee\temp for stateful session passivation
+19-Nov-2026 12:49:05.692 INFO [main] org.apache.openejb.config.ConfigurationFactory.configureService Configuring Service(id=Default Managed Container, type=Container, provider-id=Default Managed Container)
+19-Nov-2026 12:49:05.693 INFO [main] org.apache.openejb.config.AutoConfig.createContainer Auto-creating a container for bean proyecto-gestion.Comp1257058590: Container(type=MANAGED, id=Default Managed Container)
+19-Nov-2026 12:49:05.693 INFO [main] org.apache.openejb.assembler.classic.Assembler.createRecipe Creating Container(id=Default Managed Container)
+19-Nov-2026 12:49:05.700 INFO [main] org.apache.openejb.core.managed.SimplePassivater.init Using directory C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee\temp for stateful session passivation
+19-Nov-2026 12:49:05.705 INFO [main] org.apache.openejb.config.AutoConfig.deploy Configuring PersistenceUnit(name=gestionPU)
+19-Nov-2026 12:49:05.738 INFO [main] org.apache.openejb.config.AppInfoBuilder.build Enterprise application "C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee\webapps\proyecto-gestion" loaded.
+19-Nov-2026 12:49:05.765 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Assembling app: C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee\webapps\proyecto-gestion
+19-Nov-2026 12:49:05.953 INFO [main] org.apache.openejb.assembler.classic.ValidatorBuilder.getConfig Ignoring XML Configuration for validator org.apache.bval.jsr.ConfigurationImpl
+19-Nov-2026 12:49:06.078 INFO [main] null.openjpa.Runtime OpenJPA dynamically loaded a validation provider.
+19-Nov-2026 12:49:06.093 INFO [main] org.apache.openejb.assembler.classic.ReloadableEntityManagerFactory.createDelegate PersistenceUnit(name=gestionPU, provider=org.apache.openjpa.persistence.PersistenceProviderImpl) - provider time 306ms
+19-Nov-2026 12:49:06.230 INFO [main] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=ReporteServiceLocalBean) --> Ejb(deployment-id=ReporteService)
+19-Nov-2026 12:49:06.230 INFO [main] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/proyecto-gestion/ReporteService!org.example.servicio.ReporteService) --> Ejb(deployment-id=ReporteService)
+19-Nov-2026 12:49:06.231 INFO [main] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/proyecto-gestion/ReporteService) --> Ejb(deployment-id=ReporteService)
+19-Nov-2026 12:49:06.233 INFO [main] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=ReservaTemporalLocalBean) --> Ejb(deployment-id=ReservaTemporal)
+19-Nov-2026 12:49:06.233 INFO [main] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/proyecto-gestion/ReservaTemporal!org.example.servicio.ReservaTemporal) --> Ejb(deployment-id=ReservaTemporal)
+19-Nov-2026 12:49:06.233 INFO [main] org.apache.openejb.assembler.classic.JndiBuilder.bind Jndi(name=global/proyecto-gestion/ReservaTemporal) --> Ejb(deployment-id=ReservaTemporal)
+19-Nov-2026 12:49:06.250 INFO [main] org.apache.openejb.cdi.CdiBuilder.initSingleton Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@6f19ac19
+19-Nov-2026 12:49:06.318 INFO [main] org.apache.openejb.cdi.ManagedSecurityService.<init> Some Principal APIs could not be loaded: org.eclipse.microprofile.jwt.JsonWebToken out of org.eclipse.microprofile.jwt.JsonWebToken not found
+19-Nov-2026 12:49:06.337 INFO [main] org.apache.openejb.cdi.OpenEJBLifecycle.startApplication OpenWebBeans Container is starting...
+19-Nov-2026 12:49:06.343 INFO [main] org.apache.webbeans.plugins.PluginLoader.startUp Adding OpenWebBeansPlugin : [CdiPlugin]
+19-Nov-2026 12:49:06.348 INFO [main] org.apache.openejb.cdi.CdiScanner.handleBda Using annotated mode for file:/C:/Users/migue/Documents/proyecto-gestion/target/apache-tomee/webapps/proyecto-gestion/WEB-INF/beans.xml looking all classes to find CDI beans, maybe think to add a beans.xml if not there or add the jar to exclusions.list
+19-Nov-2026 12:49:06.453 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+19-Nov-2026 12:49:06.454 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+19-Nov-2026 12:49:06.454 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+19-Nov-2026 12:49:06.454 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+19-Nov-2026 12:49:06.454 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+19-Nov-2026 12:49:06.454 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+19-Nov-2026 12:49:06.454 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+19-Nov-2026 12:49:06.454 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+19-Nov-2026 12:49:06.454 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+19-Nov-2026 12:49:06.455 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+19-Nov-2026 12:49:06.455 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+19-Nov-2026 12:49:06.455 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+19-Nov-2026 12:49:06.455 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+19-Nov-2026 12:49:06.455 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+19-Nov-2026 12:49:06.455 INFO [main] org.apache.openejb.util.OptionsLog.info Using 'tomee.mp.cdi.extensions=io.smallrye.config.inject.ConfigExtension,io.smallrye.faulttolerance.FaultToleranceExtension,io.smallrye.metrics.legacyapi.LegacyMetricsExtension,io.smallrye.opentelemetry.implementation.cdi.OpenTelemetryExtension,org.apache.cxf.microprofile.client.cdi.RestClientExtension,org.apache.tomee.microprofile.faulttolerance.MPFaultToleranceCDIExtension,org.apache.tomee.microprofile.health.MPHealthCDIExtension,org.apache.tomee.microprofile.jwt.cdi.MPJWTCDIExtension,org.apache.tomee.microprofile.opentelemetry.MPOpenTelemetryCDIExtension'
+19-Nov-2026 12:49:06.698 INFO [main] org.apache.webbeans.config.BeansDeployer.validateInjectionPoints All injection points were validated successfully.
+19-Nov-2026 12:49:06.716 INFO [main] org.apache.openejb.cdi.OpenEJBLifecycle.startApplication OpenWebBeans Container has started, it took 378 ms.
+19-Nov-2026 12:49:06.718 INFO [main] org.apache.openejb.assembler.classic.Assembler.startEjbs Created Ejb(deployment-id=ReporteService, ejb-name=ReporteService, container=Default Stateless Container)
+19-Nov-2026 12:49:06.722 INFO [main] org.apache.openejb.assembler.classic.Assembler.startEjbs Created Ejb(deployment-id=ReservaTemporal, ejb-name=ReservaTemporal, container=Default Stateful Container)
+19-Nov-2026 12:49:06.735 INFO [main] org.apache.openejb.assembler.classic.Assembler.startEjbs Started Ejb(deployment-id=ReporteService, ejb-name=ReporteService, container=Default Stateless Container)
+19-Nov-2026 12:49:06.735 INFO [main] org.apache.openejb.assembler.classic.Assembler.startEjbs Started Ejb(deployment-id=ReservaTemporal, ejb-name=ReservaTemporal, container=Default Stateful Container)
+19-Nov-2026 12:49:06.738 INFO [main] org.apache.openejb.assembler.classic.Assembler.createApplication Deployed Application(path=C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee\webapps\proyecto-gestion)
+19-Nov-2026 12:49:06.994 INFO [main] org.apache.myfaces.webapp.MyFacesContainerInitializer.onStartup Using org.apache.myfaces.webapp.MyFacesContainerInitializer
+19-Nov-2026 12:49:07.048 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+19-Nov-2026 12:49:07.055 INFO [main] org.apache.tomee.myfaces.TomEEMyFacesContainerInitializer.addListener Installing <listener>org.apache.myfaces.webapp.StartupServletContextListener</listener>
+19-Nov-2026 12:49:07.253 INFO [main] org.apache.myfaces.config.DefaultFacesConfigurationProvider.getWebAppFacesConfig Reading config /WEB-INF/faces-config.xml
+19-Nov-2026 12:49:07.434 INFO [main] org.apache.myfaces.util.ExternalSpecifications.lambda$static$1 MyFaces Core CDI support enabled
+19-Nov-2026 12:49:07.479 INFO [main] org.apache.myfaces.util.ExternalSpecifications.lambda$static$0 MyFaces Core Bean Validation support enabled
+19-Nov-2026 12:49:07.530 INFO [main] org.apache.myfaces.application.ApplicationImpl.getProjectStage Couldn't discover the current project stage, using Production
+19-Nov-2026 12:49:07.549 INFO [main] org.apache.myfaces.view.facelets.ViewPoolProcessor.initialize org.apache.myfaces.CACHE_EL_EXPRESSIONS web config parameter is set to "noCache". To enable view pooling this param must be set to "alwaysRecompile". View Pooling disabled.
+19-Nov-2026 12:49:07.551 INFO [main] org.apache.myfaces.webapp.FacesInitializerImpl.initFaces MyFaces Core has started, it took [489] ms.
+19-Nov-2026 12:49:07.614 INFO [main] java.lang.reflect.Method.invoke Deployment of web application archive [C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee\webapps\proyecto-gestion.war] has finished in [3.143] ms
+19-Nov-2026 12:49:07.625 INFO [main] java.lang.reflect.Method.invoke Starting ProtocolHandler ["http-nio-8080"]
+19-Nov-2026 12:49:07.637 INFO [main] java.lang.reflect.Method.invoke Server startup in [3274] milliseconds
+19-Nov-2026 12:49:12.619 INFO [http-nio-8080-exec-2] org.apache.myfaces.util.ExternalSpecifications.lambda$static$2 MyFaces Core Servlet 6.0 support enabled
+19-Nov-2026 12:49:12.620 INFO [http-nio-8080-exec-2] org.example.faces.RastreoFases.beforePhase ===== NUEVA PETICION GET =====
+19-Nov-2026 12:49:12.620 INFO [http-nio-8080-exec-2] org.example.faces.RastreoFases.beforePhase INICIO RESTORE_VIEW(1)
+19-Nov-2026 12:49:12.758 INFO [http-nio-8080-exec-2] org.apache.myfaces.el.ELResolverBuilder.sortELResolvers Chain of EL resolvers: [org.apache.myfaces.el.resolver.implicitobject.ImplicitObjectResolver@518fc5e3, org.apache.webbeans.el22.WebBeansELResolver@6e28b8e8, org.apache.myfaces.el.resolver.CompositeComponentELResolver@28b464b9, org.apache.myfaces.el.resolver.FlashELResolver@39bef26b, org.apache.myfaces.el.resolver.ResourceResolver@16b18862, jakarta.el.ResourceBundleELResolver@3df58da4, org.apache.myfaces.el.resolver.ResourceBundleResolver@36efb70f, org.apache.myfaces.el.resolver.ImportConstantsELResolver@780c2613, org.apache.el.stream.StreamELResolverImpl@62e443e8, jakarta.el.StaticFieldELResolver@73ed7abd, jakarta.el.MapELResolver@3871fc00, jakarta.el.ListELResolver@215479a3, jakarta.el.ArrayELResolver@61ef8562, jakarta.el.BeanELResolver@794f2370]
+19-Nov-2026 12:49:12.796 INFO [http-nio-8080-exec-2] org.example.faces.RastreoFases.afterPhase FIN    RESTORE_VIEW(1)
+19-Nov-2026 12:49:12.889 INFO [http-nio-8080-exec-2] org.example.faces.RastreoFases.beforePhase INICIO APPLY_REQUEST_VALUES(2)
+19-Nov-2026 12:49:12.890 INFO [http-nio-8080-exec-2] org.example.faces.RastreoFases.afterPhase FIN    APPLY_REQUEST_VALUES(2)
+19-Nov-2026 12:49:12.890 INFO [http-nio-8080-exec-2] org.example.faces.RastreoFases.beforePhase INICIO PROCESS_VALIDATIONS(3)
+19-Nov-2026 12:49:12.892 INFO [http-nio-8080-exec-2] org.example.faces.RastreoFases.afterPhase FIN    PROCESS_VALIDATIONS(3)
+19-Nov-2026 12:49:12.892 INFO [http-nio-8080-exec-2] org.example.faces.RastreoFases.beforePhase INICIO UPDATE_MODEL_VALUES(4)
+19-Nov-2026 12:49:12.892 INFO [http-nio-8080-exec-2] org.example.faces.RastreoFases.afterPhase FIN    UPDATE_MODEL_VALUES(4)
+19-Nov-2026 12:49:12.892 INFO [http-nio-8080-exec-2] org.example.faces.RastreoFases.beforePhase INICIO INVOKE_APPLICATION(5)
+19-Nov-2026 12:49:12.892 INFO [http-nio-8080-exec-2] org.example.faces.RastreoFases.afterPhase FIN    INVOKE_APPLICATION(5)
+19-Nov-2026 12:49:12.892 INFO [http-nio-8080-exec-2] org.example.faces.RastreoFases.beforePhase INICIO RENDER_RESPONSE(6)
+19-Nov-2026 12:49:13.125 INFO [http-nio-8080-exec-2] org.example.faces.CicloBean.iniciar    [Bean] CicloBean creado: vista nueva (@ViewScoped)
+19-Nov-2026 12:49:13.126 INFO [http-nio-8080-exec-2] org.example.faces.RastreoFases.afterPhase FIN    RENDER_RESPONSE(6)
+19-Nov-2026 12:49:22.312 INFO [http-nio-8080-exec-5] org.example.faces.RastreoFases.beforePhase ===== NUEVA PETICION GET =====
+19-Nov-2026 12:49:22.313 INFO [http-nio-8080-exec-5] org.example.faces.RastreoFases.beforePhase INICIO RESTORE_VIEW(1)
+19-Nov-2026 12:49:22.323 INFO [http-nio-8080-exec-5] org.example.faces.RastreoFases.afterPhase FIN    RESTORE_VIEW(1)
+19-Nov-2026 12:49:22.323 INFO [http-nio-8080-exec-5] org.example.faces.RastreoFases.beforePhase INICIO RENDER_RESPONSE(6)
+19-Nov-2026 12:49:22.561 INFO [http-nio-8080-exec-5] org.example.faces.RastreoFases.afterPhase FIN    RENDER_RESPONSE(6)
+19-Nov-2026 12:49:23.837 INFO [http-nio-8080-exec-10] org.example.faces.RastreoFases.beforePhase ===== NUEVA PETICION GET =====
+19-Nov-2026 12:49:23.838 INFO [http-nio-8080-exec-10] org.example.faces.RastreoFases.beforePhase INICIO RESTORE_VIEW(1)
+19-Nov-2026 12:49:23.839 INFO [http-nio-8080-exec-10] org.example.faces.RastreoFases.afterPhase FIN    RESTORE_VIEW(1)
+19-Nov-2026 12:49:23.839 INFO [http-nio-8080-exec-10] org.example.faces.RastreoFases.beforePhase INICIO APPLY_REQUEST_VALUES(2)
+19-Nov-2026 12:49:23.839 INFO [http-nio-8080-exec-10] org.example.faces.RastreoFases.afterPhase FIN    APPLY_REQUEST_VALUES(2)
+19-Nov-2026 12:49:23.839 INFO [http-nio-8080-exec-10] org.example.faces.RastreoFases.beforePhase INICIO PROCESS_VALIDATIONS(3)
+19-Nov-2026 12:49:23.839 INFO [http-nio-8080-exec-10] org.example.faces.RastreoFases.afterPhase FIN    PROCESS_VALIDATIONS(3)
+19-Nov-2026 12:49:23.840 INFO [http-nio-8080-exec-10] org.example.faces.RastreoFases.beforePhase INICIO UPDATE_MODEL_VALUES(4)
+19-Nov-2026 12:49:23.840 INFO [http-nio-8080-exec-10] org.example.faces.RastreoFases.afterPhase FIN    UPDATE_MODEL_VALUES(4)
+19-Nov-2026 12:49:23.840 INFO [http-nio-8080-exec-10] org.example.faces.RastreoFases.beforePhase INICIO INVOKE_APPLICATION(5)
+19-Nov-2026 12:49:23.840 INFO [http-nio-8080-exec-10] org.example.faces.RastreoFases.afterPhase FIN    INVOKE_APPLICATION(5)
+19-Nov-2026 12:49:23.840 INFO [http-nio-8080-exec-10] org.example.faces.RastreoFases.beforePhase INICIO RENDER_RESPONSE(6)
+19-Nov-2026 12:49:23.841 INFO [http-nio-8080-exec-10] org.example.faces.CicloBean.iniciar    [Bean] CicloBean creado: vista nueva (@ViewScoped)
+19-Nov-2026 12:49:23.877 INFO [http-nio-8080-exec-10] org.example.faces.RastreoFases.afterPhase FIN    RENDER_RESPONSE(6)
+19-Nov-2026 12:55:46.382 INFO [main] java.lang.reflect.Method.invoke Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+19-Nov-2026 12:55:46.383 INFO [main] java.lang.reflect.Method.invoke Pausing ProtocolHandler ["http-nio-8080"]
+19-Nov-2026 12:55:46.389 INFO [main] java.lang.reflect.Method.invoke Parando servicio [Catalina]
+19-Nov-2026 12:55:46.403 INFO [main] org.apache.openejb.assembler.classic.Assembler.destroyApplication Undeploying app: C:\Users\migue\Documents\proyecto-gestion\target\apache-tomee\webapps\proyecto-gestion
+19-Nov-2026 12:55:46.443 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc La aplicación web [proyecto-gestion] registró el conductor JDBC [com.mysql.cj.jdbc.Driver] pero falló al anular el registro mientras la aplicación web estaba parada. Para prevenir un fallo de memoria, se ha anulado el registro del conductor JDBC por la fuerza.
+19-Nov-2026 12:55:46.444 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [proyecto-gestion] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:389)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:124)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:215)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:84)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+ java.base/java.lang.Thread.run(Thread.java:1447)
+19-Nov-2026 12:55:46.448 INFO [main] java.lang.reflect.Method.invoke Stopping ProtocolHandler ["http-nio-8080"]
+19-Nov-2026 12:55:46.453 INFO [main] org.apache.openejb.server.SimpleServiceManager.stop Stopping server services
+19-Nov-2026 12:55:46.461 INFO [main] org.apache.openejb.assembler.classic.Assembler.doResourceDestruction Closing DataSource: gestionDS
+19-Nov-2026 12:55:46.466 INFO [main] org.apache.openejb.assembler.classic.Assembler.doResourceDestruction Closing DataSource: gestionDSNoJta
+19-Nov-2026 12:55:46.473 INFO [main] java.lang.reflect.Method.invoke Destroying ProtocolHandler ["http-nio-8080"]
